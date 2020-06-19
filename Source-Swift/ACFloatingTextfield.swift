@@ -272,17 +272,13 @@ fileprivate extension ACFloatingTextfield {
         bottomLineViewHeight?.constant = 2;
         
         if self.errorText != nil && self.errorText != "" {
-            errorLabelHieght?.constant = 15;
-            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
+            errorLabelHieght?.constant = 15;            
                 self.bottomLineView?.backgroundColor = self.errorLineColor;
                 self.layoutIfNeeded()
-                }, completion: nil)
         } else {
             errorLabelHieght?.constant = 0;
-            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
                 self.bottomLineView?.backgroundColor = self.errorLineColor;
                 self.layoutIfNeeded()
-                }, completion: nil)
         }
         
         if shakeLineWithError {
